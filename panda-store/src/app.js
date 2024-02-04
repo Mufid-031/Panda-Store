@@ -57,23 +57,23 @@ document.addEventListener("alpine:init", () => {
 
   Alpine.store("cart", {
     items: [],
-    totalHarga: 0,
-    totalJumlah: 0,
+    total: 0,
+    quantity: 0,
     add(newItem) {
       const cartItem = this.items.find((item) => item.id === newItem.id);
       if (!cartItem) {
-        this.items.push({ ...newItem, totalJumlah: 1, totalHarga: newItem.price });
-        this.totalJumlah += 1;
-        this.totalHarga += newItem.price;
+        this.items.push({ ...newItem, quantity: 1, total: newItem.price });
+        this.total += newItem.price;
+        this.quantity++;
       } else {
         this.items = this.items.map((item) => {
           if (item.id !== newItem.id) {
             return item;
           } else {
-            item.totalJumlah += 1;
-            item.totalHarga = item.price * item.totalJumlah;
-            this.totalJumlah += 1;
-            this.totalHarga += item.price;
+            item.quantity++;
+            item.total = item.price * item.quantity;
+            this.quantity++;
+            this.total += item.price;
             return item;
           }
         });
@@ -82,56 +82,26 @@ document.addEventListener("alpine:init", () => {
 
     remove(id) {
       const cartItem = this.items.find((item) => item.id === id);
-      if (cartItem.totalJumlah > 1) {
+      if (cartItem.quantity > 1) {
         this.items = this.items.map((item) => {
           if (item.id !== id) {
             return item;
           } else {
-            item.totalJumlah -= 1;
-            item.totalHarga = item.price * item.totalJumlah;
-            this.totalJumlah -= 1;
-            this.totalHarga -= item.price;
+            item.quantity--;
+            item.total = item.price * item.quantity;
+            this.quantity--;
+            this.total -= item.price;
             return item;
           }
         });
-      } else if (cartItem.totalJumlah === 1) {
+      } else if (cartItem.quantity === 1) {
         this.items = this.items.filter((item) => item.id !== id);
-        this.totalHarga -= cartItem.price;
-        this.totalJumlah -= 1;
+        this.total -= cartItem.price;
+        this.quantity--;
       }
     },
   });
 });
-
-// form validation
-const checkoutButton = document.querySelector(".checkout");
-checkoutButton.disabled = true;
-
-const form = document.querySelector('.form-payment');
-const nama = document.querySelector("#name");
-const email = document.querySelector("#email");
-const phone = document.querySelector("#phone");
-
-form.addEventListener('keyup', function() {
-  if ( nama.value === "" || email.value === "" || phone.value === "" ) {
-    checkoutButton.disabled = true;
-    checkoutButton.classList.remove('disabled');
-    checkoutButton.classList.add('disabled');
-  } else if ( nama.value !== "" && email.value !== "" && phone.value !== "" ) {
-    checkoutButton.disabled = false;
-    checkoutButton.classList.remove('disabled');
-  }
-});
-
-// kirim data ketika dicheckout
-checkoutButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const data = new URLSearchParams(formData);
-  const objData = Object.fromEntries(data);
-  console.log(objData)
-});
-
 
 
 // Format mata uang rupiah

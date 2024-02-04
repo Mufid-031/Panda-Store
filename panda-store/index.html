@@ -10,11 +10,16 @@
     <!-- Css AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- App js -->
+    <script src="src/app.js" async></script>
+
     <!-- Alpine js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- App js -->
-    <script src="src/app.js" async></script>
+    <!-- Midtrans -->
+    <script type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-pYjyATgB291PcHtf"></script>
   </head>
 
   <body>
@@ -40,7 +45,7 @@
           <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="button-shoppingcart" class="button-shoppingcart">
             <use href="./img/feather-sprite.svg#shopping-cart" />
           </svg>
-          <span class="notification-cart" x-text="$store.cart.totalJumlah"></span>
+          <span class="notification-cart" x-text="$store.cart.quantity"></span>
         </a>
         <div class="garis-tiga">
           <input type="checkbox" id="checkbox" />
@@ -66,9 +71,9 @@
                 <div class="harga">
                   <span x-text="rupiah(item.price)"></span> &times;
                   <button id="remove" @click.prevent="$store.cart.remove(item.id)">&minus;</button>
-                  <span x-text="item.totalJumlah"></span>
+                  <span x-text="item.quantity"></span>
                   <button id="add" @click.prevent="$store.cart.add(item)">&plus;</button> &equals;
-                  <span x-text="rupiah(item.totalHarga)"></span>
+                  <span x-text="rupiah(item.total)"></span>
                 </div>
               </div>
             </div>
@@ -76,10 +81,10 @@
         </div>
         <form class="form-payment" x-show="$store.cart.items.length">
           <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">
-          <input type="hidden" name="total" x-model="$store.cart.totalHarga">
+          <input type="hidden" name="total" x-model="$store.cart.total">
           <h4 class="data-pembeli-text">Data Pembeli</h4>
           
-          <label for="nama">
+          <label for="name">
             <span>Nama</span>
             <input type="text" name="name" id="name">
           </label>
@@ -94,8 +99,8 @@
             <input type="number" name="phone" id="phone">
           </label>
           
-          <button class="checkout disabled">Checkout</button>
-          <h4 class="total" x-show="$store.cart.items.length">Total : <span x-text="rupiah($store.cart.totalHarga)"></span></h4>
+          <button class="checkout disabled" id="checkout-button">Checkout</button>
+          <h4 class="total" x-show="$store.cart.items.length">Total : <span x-text="rupiah($store.cart.total)"></span></h4>
         </form>
       </div>
     </nav>
@@ -226,7 +231,7 @@
             <h1><span x-text="rupiah(item.price)"></span></h1>
 
             <a @click="$store.cart.add(item)">
-              <svg width="26" height="26" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shopping-button-card">
                 <use href="./img/feather-sprite.svg#shopping-cart" />
               </svg>
             </a>
@@ -281,7 +286,7 @@
             <h1><span x-text="rupiah(item.price)"></span></h1>
 
             <a @click="$store.cart.add(item)">
-              <svg width="26" height="26" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shopping-button-card">
                 <use href="./img/feather-sprite.svg#shopping-cart" />
               </svg>
             </a>

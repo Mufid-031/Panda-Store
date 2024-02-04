@@ -707,8 +707,8 @@ footer .footer-bottom ul li img {
     width: 45%;
     height: 680px;
     box-sizing: border-box;
-    background-color: darkgray;
     margin-bottom: 20px;
+    background-color: var(--bgmain);
   }
 
   .product-watch {
@@ -720,8 +720,8 @@ footer .footer-bottom ul li img {
     width: 45%;
     height: 680px;
     box-sizing: border-box;
-    background-color: darkgray;
     margin-bottom: 20px;
+    background-color: var(--bgmain);
   }
 
   footer .footer-top {
@@ -789,6 +789,7 @@ footer .footer-bottom ul li img {
     height: 700px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    background-color: var(--bgmain);
   }
 
   .product-watch {
@@ -801,6 +802,7 @@ footer .footer-bottom ul li img {
     height: 700px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    background-color: var(--bgmain);
   }
 
   .product-keyboard {
