@@ -1,0 +1,416 @@
+/* CSS reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, container, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, container, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* style */
+body {
+	background-color: #292928;
+}
+.container {
+	font-family: arial;
+	display: inline-flex;
+	width: 100%;
+	height: 100px;
+	background-color: #292928;
+}
+
+.navbar {
+	height: 729px;
+	width: 30%;
+	background-color: gray;
+	overflow: auto;
+	scroll-behavior: smooth;
+	z-index: 0;	
+	/* display: none; */
+}
+
+.container .navbar ul.bar li {
+	display: block;
+}
+
+.navbar h2 {
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 200px;
+	cursor: pointer;
+}
+
+.navbar img {
+	padding-left: 70px;
+	width: 100px;
+	height: 100px;
+}
+
+.navbar p {
+	margin-left: 60px;
+	color: #3dfc70;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.container .navbar ul.bar li {
+	font-size: 20px;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.container .navbar ul.bar li a {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.navbar h2:hover {
+	color: darkgray;
+}
+
+.container .navbar ul.bar li:hover {
+	background-color: darkgray;
+}
+
+.nav {
+	display: inline-flex;
+}
+
+.head {
+	display: inline-block;
+	width: 130%;
+	padding-top: 30px;
+	/* background-color: green; */
+}
+
+.container .head ul li{
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.container .head ul li.garis-tiga .side h1 {
+	font-size: 40px;
+	color: darkgray;
+	cursor: pointer;
+	/* display: inline-block; */
+}
+
+.container .head ul li form {
+	display: inline-block;
+}
+
+.container .head ul li form input {
+	width: 270px;
+	height: 40px;
+	border-radius: 20px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.container .head ul li button {
+	width: 40px;
+	height: 40px;
+	border: 1px solid darkgray;
+	border-radius: 20px;
+	margin-left: 20px;
+	background-color: darkgray;
+	color: gray;
+}
+
+.container .head ul li button:hover {
+	color: white;
+	background-color: gray;
+}
+
+.container .head ul li a {
+	padding-right: 10px;
+	text-decoration: none;
+	color: darkgray;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.container .head ul li a:hover {
+	color: white;
+}
+
+.container ul li.lastnav ul li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.container .head ul li.lastnav ul li a {
+	text-decoration: none;
+	color: darkgray;
+	font-size: 20px;
+	font-weight: bold
+}
+
+.container .head ul li.lastnav ul li a:hover {
+	color: white;
+}
+
+.container .head ul li h3{
+	color: darkgray;
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: -10px;
+	cursor: pointer;
+}
+
+.container .head nav ul li .teman{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: gray;
+	border-radius: 50%;
+}
+.container .head nav ul li .my-akun{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: gray;
+	border-radius: 50%;
+}
+
+.container .navsetting {
+	width: 30%;
+	height: 729px;
+	background-color: gray;
+}
+
+.container .navsetting nav ul {
+	padding: 30px;
+}
+
+.container .navsetting nav ul li {
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 10px;
+}
+
+.container .navsetting nav ul li a {
+	padding-left: 20px;
+	text-decoration: none;
+	color: #292928;
+	font-size: 15px;
+}
+
+.container .navsetting nav .garis {
+	width: 180px;
+	height: 1px;
+	margin-left: 30px;
+	background-color: #292928;
+}
+
+.container .navsetting nav ul li:hover {
+	background-color: darkgray;
+}
+
+.main {
+	width: 1000px;
+	font-family: arial;
+	display: inline-block;
+	margin-left: 250px;
+	padding: 50px;
+	/* background-color: green; */
+	z-index: 1;
+	/* display:none; */
+}
+
+.main .heading {
+	margin-top: 100px;
+	/* background-color: green; */
+}
+
+.main .heading h1 {
+	color: #0a52c7;
+	font-size: 40px;
+}
+
+.main .heading h2 {
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+.main .heading h5 {
+	padding-top: 20px;
+	padding-left: 50px;
+	color: #3dfc70;
+	font-size: 70px;
+}
+
+.main .heading p {
+	padding-top: 20px;
+	color: white;
+	font-size: 20px;
+}
+
+.main .animasi {
+	margin-left: 600px;
+	margin-top: -250px;
+	/* background-color: green; */
+}
+
+.non-aktif {
+	display: none;
+}
+
+.aktif {
+	display: none;
+}
+
+.block {
+	display: block:
+}
+
+.geser {
+	margin-left: 25px;
+}
+
+.width100 {
+	width: 100%;
+}
+
+
+/* clear float */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+ 
+.cf:after {
+	clear: both;
+}
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+	*zoom: 1;
+}
+
+
+/* Animation */
+@keyframe slideRight{
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframe slideLeft{
+	0%{
+		transform: translateX(100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframe slideTop{
+	0%{
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframe slideBottom{
+	0%{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+/* Screen width */
+@media screen and (max-width:680px){
+
+	.main{
+		width: 60%;
+	}
+	.nav{
+		width: 30%;
+	}
+	.head{
+		width: 60%;
+	}
+}

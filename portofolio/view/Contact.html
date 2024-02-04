@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ahmadMufidRisqi{};-Contact</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+      section {
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
+      }
+
+      .animasi {
+        margin-left: 780px;
+        animation: zoomIn 1s ease;
+      }
+
+      .contactus {
+        height: 500px;
+        width: 600px;
+        background-color: gray;
+        margin-top: -500px;
+        margin-left: 100px;
+        padding: 40px;
+        animation: slideRight 1.5s ease;
+        border-radius: 9px;
+      }
+
+      .contactus h1 {
+        color: yellowgreen;
+        margin-bottom: 10px;
+      }
+
+      .contactus .garis {
+        width: 250px;
+        height: 10px;
+        background-color: greenyellow;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: -15px;
+      }
+
+      .contactus p {
+        margin-top: 20px;
+      }
+
+      .contactus input[type="text"] {
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        border: 1px solid #2d9fd9;
+        color: #a0d18c;
+        width: 500px;
+        height: 50px;
+        padding-left: 10px;
+      }
+
+      .firtname {
+        border: 1px solid black;
+      }
+
+      .country {
+        margin-top: 20px;
+      }
+
+      .email {
+        margin-top: 20px;
+      }
+
+      .pertanyaan textarea {
+        margin-top: 20px;
+      }
+
+      .pertanyaan textarea::placeholder {
+        padding-top: 18px;
+        padding-left: 10px;
+      }
+
+      .button {
+        width: 50px;
+        margin-top: -50px;
+      }
+
+      .button button {
+        width: 150px;
+        height: 50px;
+        margin-top: -20px;
+        margin-left: 350px;
+        border-radius: 15px;
+        background-color: greenyellow;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border: 1px solid #a0d18c;
+        color: #2d9fd9;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h4><a href="#">Mufid_Risqi{};</a></h4>
+      </div>
+
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Portfolio.html">Portofolio</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <div class="garis-tiga">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="animasi">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+
+        <dotlottie-player
+          src="https://lottie.host/5feb3f83-dcab-4f9e-9c80-928155c8b98e/0hzBSCU5le.json"
+          background="transparent"
+          speed="1"
+          style="width: 650px; height: 650px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+
+      <div class="contactus">
+        <form action="">
+          <h1>Contact us</h1>
+          <div class="garis"></div>
+          <div class="firstname">
+            <input type="text" id="name" placeholder="Name" />
+          </div>
+
+          <div class="country">
+            <input type="text" id="country" placeholder="Country" />
+          </div>
+
+          <div class="email">
+            <input type="text" id="email" placeholder="Email" />
+          </div>
+
+          <div class="pertanyaan">
+            <textarea
+              name="pertanyaan"
+              id="pertanyaan"
+              cols="50"
+              rows="3"
+              placeholder="pertanyaan"
+            ></textarea>
+          </div>
+
+          <div class="button">
+            <button type="button" id="button">Send Via WhatsApp</button>
+          </div>
+        </form>
+
+        <p>NB : Di mohon jangan menspam/mengirim pertanyaan berkali-kali, akan saya usahakan untuk membaca pertanyaan anda</p>
+
+      </div>
+    </div>
+
+    <script src="../dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/script.js"></script>
+  </body>
+</html>

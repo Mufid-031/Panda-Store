@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ahmadMufidRisqi{};-Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+      section {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      #home .foto img {
+        width: 500px;
+        height: 500px;
+        border: 1px solid gold;
+        border-radius: 50%;
+        box-shadow: 0px 0px 1px gold, 0px 0px 5px gold, 0px 0px 10px gold, 0px 0px 20px gold, 0px 0px 40px gold;
+        animation: zoomIn 1s ease forwards, floatImage 4s ease;
+      }
+
+      .container p {
+        line-height: 20px;
+        font-weight: bold;
+        animation: slideLeft 1s ease forwards;
+      }
+
+      .name {
+        color: white;
+        animation: slideBottom 1s ease forwards;
+        font-size: 30px;
+      }
+
+      .span-nama {
+        color: greenyellow;
+      }
+
+      #home .container h1.frond-end {
+        color: greenyellow;
+        font-size: 50px;
+        animation: slideRight 1s ease forwards;
+      }
+
+      .container a {
+        background: var(--bg-color);
+        padding: 10px 18px;
+        text-decoration: none;
+        font-weight: bold;
+        color: greenyellow;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 20px 0;
+        border-style: solid;
+        border-radius: 100px;
+      }
+
+      .btn {
+        animation: slideTop 1s ease forwards;
+      }
+
+      .container a:hover {
+        background: greenyellow;
+        color: black;
+        border-color: white;
+      }
+
+      @media screen and (max-width: 1300px) {
+        nav ul {
+          width: 50%;
+        }
+
+        section#home {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        section#home .foto img {
+          margin-bottom: 30px;
+        }
+
+        section#home .container {
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        nav ul {
+          position: absolute;
+          right: 0;
+          top: 0;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 80%;
+          height: 100vh;
+          background-color: var(--bg-color);
+          z-index: auto;
+          transform: translateX(100%);
+          transition: all 1s;
+          opacity: 0;
+        }
+
+        nav ul.slide {
+          transform: translateX(0);
+          opacity: 0.9;
+        }
+
+        .garis-tiga {
+          display: flex;
+        }
+
+        .main {
+          flex-direction: column;
+          transform: scale(1);
+          transition: all 1s;
+          opacity: 1;
+        }
+
+        .main.aktif {
+          transform: scale(0);
+          transition: all 1s;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <h4><a href="#">Mufid_Risqi{};</a></h4>
+      </div>
+
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Portfolio.html">Portofolio</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <div class="garis-tiga">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="foto">
+        <img src="../img/spider-man-miles-morales-update-ps5-ps4-scaled.jpg" />
+      </div>
+
+      <div class="container">
+        <h5 class="name">I'm <span class="span-nama">Ahmad Mufid Risqi</span></h5>
+        <h1 class="frond-end"><span id="typed-text">Front-end Developer </span><span class="cursor">|</span></h1>
+        <p class="content">Mahasiswa Teknik Informatika - Universitas Trunojoyo Madura</p>
+        <a href="https://www.instagram.com/damslette3/" target="_blank" class="btn">Instagram</a>
+      </div>
+    </section>
+
+    <script src="../assets/script.js"></script>
+  </body>
+</html>

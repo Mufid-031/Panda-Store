@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ahmadMufidRisqi{};-About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+
+      section {
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
+      }
+
+      .container{
+        display: inline-flex;
+      }
+
+      .img-skills img{
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        border-radius: 50%;
+        box-shadow: 0px 0px 1px gold,
+        0px 0px 5px gold,
+        0px 0px 10px gold,
+        0px 0px 20px gold,
+        0px 0px 30px gold;
+        animation: slideRight 1s ease;
+      }
+
+      .content-about {
+        width: 1000px;
+        margin-left: -300px;
+        border-top: 5px solid yellowgreen;
+        border-right: 5px solid yellowgreen;
+        border-bottom: 5px solid yellowgreen;
+        border-radius: 10px;
+        border-color: yellowgreen;
+        padding: 30px;
+        animation: slideLeft 2s ease;
+      }
+
+      .paragraf-1, .paragraf-2{
+        padding: 20px 10px 20px 300px;
+      }
+
+      .skills {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .skills-card li {
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        display: inline-block;
+        border: solid;
+        border-radius: 2px;
+        background-color: var(--bg-color);
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin-left: 20px;
+        margin: 10px;
+        box-shadow: 0px 30px 8px black;
+      }
+ 
+      .skills-card li:hover {
+        animation: skillsCard 1s ease alternate forwards;
+        border-color: yellowgreen;
+      }
+
+      @media screen and (max-width: 1300px) {
+        nav ul {
+          width: 50%;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        nav ul {
+          position: absolute;
+          right: 0;
+          top: 0;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 80%;
+          height: 100vh;
+          background-color: var(--bg-color);
+          z-index: auto;
+          transform: translateX(100%);
+          transition: all 1s;
+          opacity: 0;
+        }
+
+        nav ul.slide {
+          transform: translateX(0);
+          opacity: 0.9;
+        }
+
+        .garis-tiga {
+          display: flex;
+        }
+
+        .main {
+          flex-direction: column;
+          transform: scale(1);
+          transition: all 1s;
+          opacity: 1;
+        }
+
+        .main.aktif {
+          transform: scale(0);
+          transition: all 1s;
+          opacity: 0;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h4><a href="#">Mufid_Risqi{};</a></h4>
+      </div>
+
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Portfolio.html">Portofolio</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <div class="garis-tiga">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <section class="skills" id="skills">
+      <div class="container">
+      <div class="img-skills">
+        <img src="../img/spider-man-miles-morales-update-ps5-ps4-scaled.jpg" alt="">
+      </div>
+        <div class="content-about">
+          <p class="paragraf-1">
+            &nbsp; &nbsp; &nbsp; Hi everyone! My name is Ahmad Mufid Risqi. I'm a
+            web developer from Madura, East Java. I have 1 year of experience in
+            back-end web development. I really enjoy what I do right now, in my
+            opinion, creating programs is not just a job, but also an art that has
+            aesthetic value
+          </p>
+          <p class="paragraf-2">
+            &nbsp; &nbsp; &nbsp; My job is to build your website to be functional
+            and user-friendly yet still attractive. In addition, I provide a
+            personal touch to your product and ensure that the website catches
+            attention and is easy to use. My goal is to convey your message and
+            identity in the most creative way. If you are interested in hiring me,
+            please contact the listed contact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1
+        class="skills"
+        style="
+          color: yellowgreen;
+          text-align: center;
+          padding-bottom: 30px;
+          font-size: 50px;
+        "
+      >
+        My Skills
+      </h1>
+      <ul class="skills-card">
+        <li>
+          <div class="html">
+            <img
+              src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png"
+              style="height: 70px"
+              width="70px"
+              alt=""
+            />
+          </div>
+        </li>
+        <li>
+          <div class="css">
+            <img
+              src="https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png"
+              style="width: 70px; height: 70px"
+              alt=""
+            />
+          </div>
+        </li>
+        <li>
+          <div class="js">
+            <img
+              src="https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png"
+              style="width: 70px; height: 70px"
+              alt=""
+            />
+          </div>
+        </li>
+        <li>
+          <div class="python">
+            <img
+              src="https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png"
+              style="width: 70px"
+              height="70px"
+              alt=""
+            />
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
